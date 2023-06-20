@@ -1,0 +1,19 @@
+@import "./elements/color-font.scss";
+@import "./paginas/home.scss";
+
+*{
+    box-sizing: border-box;
+}
+
+#body{
+    font-size: 16px;
+    font-family: $font;
+    font-weight: 400;
+    background-color: $bkgnd-page;
+}
+
+.content{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+

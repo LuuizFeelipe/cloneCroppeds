@@ -1,0 +1,13 @@
+$bkgnd-page: #F5F5F5;
+$branco: #FFFFFF;
+$bkgnd-footer: #FA4515;
+$laranja-icone: #FA8D70;
+$bkgnd-searchbar: #FEECE7;
+$roxo: #6E21A2;
+$preto: #000000;
+$font: 'Raleway';
+
+@mixin btn-laranja {
+    color: $laranja-icone;
+    font-size: 19px;
+}
