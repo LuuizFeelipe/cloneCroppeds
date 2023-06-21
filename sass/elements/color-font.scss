@@ -11,3 +11,10 @@ $font: 'Raleway';
     color: $laranja-icone;
     font-size: 19px;
 }
+
+@mixin padrao-input{
+    border: none;
+    padding: 10px 10px;
+    box-shadow: none;
+    border-radius: 25px;
+}
