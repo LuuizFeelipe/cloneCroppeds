@@ -96,15 +96,23 @@ main{
     width: auto;
 }
 
-.item__banner-mobile img{
-    width: 100% ;
-}
-
-
 //GRID BANNERS MOBILE
 
 .grid-banners__mobile{
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    .banners__mobile__title{
+        font-size: 1.5em;
+        letter-spacing: 0.1em;
+        text-align: left;
+        line-height: 25px;
+        padding-bottom: 10px;
+        width: auto;
+
+    }
     .banners__grid{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -126,10 +134,89 @@ main{
     }
 
     .banners__grid__link img{
-        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
-
 }
+
+//NEWSLETTER
+
+.newsletter{
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    .newsletter__banner{
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        background-repeat: no-repeat;
+        background-size: cover;
+       
+    }
+    .newsletter__conteudo{
+        flex: 1;
+        background-color: rgba(245, 245, 245, 0.603);
+        padding: 25px;
+
+        .newsletter__title{
+            color: $roxo;
+            font-size: 30px;
+            padding-right: 40px;
+        }
+        .newsletter__title b{
+            font-weight: 700;
+        }
+        .newsletter__text{
+            font-weight: 600;
+        }
+    }
+    .newsletter__inputs{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+        .newsletter__input{
+            width: 47%;
+            border: none;
+            padding: 15px 10px;
+            box-shadow: none;
+            border-radius: 25px;
+        }
+    }
+}
+
+//BANNER HOME
+.home__banner{
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+
+    
+
+
+
+
+
+
+
+
 
 
 
