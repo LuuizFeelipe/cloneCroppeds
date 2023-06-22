@@ -18,3 +18,12 @@ $font: 'Raleway';
     box-shadow: none;
     border-radius: 25px;
 }
+
+@mixin padrao-btn-roxo{
+    border-radius: 25px;
+    color: $branco;
+    background-color: $roxo;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+}

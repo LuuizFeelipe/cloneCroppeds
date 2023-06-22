@@ -203,24 +203,89 @@
     align-items: center;
     justify-content: center;   
 
+        .footer__title__padrao{
+        color: $roxo;
+        font-weight: 700;
+        margin-bottom: 15px;
+        }
+
         .footer__register__social{
             display: flex;
             flex-direction: column;
             gap: 40px;
-
+            width: 100%;
+            margin-bottom: 40px;
+            //REGISTER
+            .footer__register__title{
+                text-align: start;
+            }
             .footer__register__form{
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
                 flex-wrap: nowrap;
                 gap: 10px;
+                margin: 15px 0;
 
                 .register__form__input{
-                    @include padrao-input;        
+                    @include padrao-input;    
+                    width: auto;  
+                    text-align: left;
+                    background: transparent;
+                    border: 2px solid $branco;
+                    color: $branco;
                 }
+                .register__form__input::placeholder{
+                    color: $branco;
+                    font-size: 13px;
+                }
+            }
+            .footer__register__button{
+                text-align: start;
+                .submite__register__footer{
+                    @include padrao-btn-roxo;
+                    width: 40%;
+                    text-align: start;
+                    padding-left: 10px;
+                }
+            }
+            //SOCIAL
+            .footer__social__icons{
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
 
-
+                .social__link{
+                    text-decoration: none;
+                    color: $roxo;
+                    font-size: 25px;
+                }
             }
         }
+        .footer__topicos{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            gap: 20px;
+
+            .topico__lista li a{
+                text-decoration: none;
+                color: $branco;
+                font-size: 14px;
+            }
+
+
+
+        }
+
+
+
+
 
         .topico__lista{
             list-style: none;
@@ -228,43 +293,4 @@
             padding: 0;
         }
 
-
-
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
