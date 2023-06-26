@@ -10,8 +10,8 @@
     border-radius: 0 0 20px 20px;
     position: fixed;
     top: 0;
-    right: 0;
     left: 0;
+    right: 0;
     padding-top: 10px;
     z-index: 10000;
 
@@ -22,28 +22,25 @@
         align-items: center;
         justify-content: space-between;
     }
-
     .menu__hamburguer i{
         font-size: 25px;
         color: $roxo;
     }
-
     #logo__header{
-    
         padding: 0 10px;
     }
-    
+    .header__menu__desktop{
+        display: none;
+    }
     #logo__header img{
         width: 100%;
     }
-
     .shoppingbag__login{
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         gap: 15px;
     }
-
     .shoppingbag__login i , .btn__busca i{
         @include btn-laranja
     }
@@ -78,7 +75,7 @@
     }
 }
 //BANNERS
-.banners__mobile{
+.banners__home{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -300,29 +297,64 @@
 
 
 @media screen and (min-width: 640px){
+    //NEWSLETTER
+    .newsletter{
+        .newsletter__conteudo{
+            padding: 70px;
+        }
+    }
+    //FOOTER
+    .footer__register__social{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-areas: "register register social" ;
+        grid-template-rows: auto;
+        gap: 40px;
 
-//NEWSLETTER
-.newsletter{
-    .newsletter__conteudo{
-        padding: 70px;
+        .footer__register{
+            grid-area: register;
+            margin-bottom: 0px;
+        }
+        
+        .footer__social{
+            grid-area: social;
+        }
     }
 }
 
-//FOOTER
-.footer__register__social{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-areas: "register register social" ;
-    grid-template-rows: auto;
-    gap: 40px;
+@media screen and (min-width: 1024px){
+    //HEADER
+    .header__wrap{
+        .header__search-space{
+            display: none;
+        }
+        
+        .menu__hamburguer{
+            display: none;
+        }
+    }
 
-    .footer__register{
-        grid-area: register;
-        margin-bottom: 0px;
+    //BANNERS
+    .banners__home{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 0.5fr;
+        grid-template-areas: 
+        "grid1 grid2"
+        "grid1 grid3";
+
+
+        #banner__home1{
+            grid-area: grid1;
+            height: 100%;        }
+        #banner__home2{
+            grid-area: grid2;
+            height: 100%;
+        }
+        #banner__home3{
+            grid-area: grid3;
+
+        }
     }
-    
-    .footer__social{
-        grid-area: social;
-    }
-  }
+
 }

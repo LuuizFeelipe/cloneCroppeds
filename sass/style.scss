@@ -11,7 +11,6 @@
     font-family: $font;
     font-weight: 400;
     background-color: $bkgnd-page;
-    width: 100%;
 }
 
 .content__header{
@@ -32,9 +31,22 @@ img{
     width: 100%;
 }
 
+.container__geral{
+    max-width: 4500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 
 @media screen and (min-width: 640px){
     .content{
         padding: 0 10%;
-    }    
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    .content{
+        padding: 0;
+    }
 }
