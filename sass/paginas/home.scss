@@ -154,16 +154,18 @@
     flex-wrap: nowrap;
     visibility: hidden;
 
-    .newsletter__banner{
+    .newsletter__banner-mobile{
+        background-image: url(https://www.croppeds.com.br/app-croppeds/assets/images/dinamica/album/11/x11-banner---newsletter-191222-daebf8.jpg.pagespeed.ic.-VasfLyX92.jpg); 
         display: flex;
-        flex: 1;
         align-items: center;
         justify-content: center;
         flex-direction: row;
         flex-wrap: nowrap;
         background-repeat: no-repeat;
-        background-size: cover;
-       
+        background-size: cover;      
+    }
+    .newsletter__banner-desktop{
+        display: none;
     }
     .newsletter__conteudo{
         flex: 1;
@@ -181,17 +183,21 @@
         .newsletter__text{
             font-weight: 600;
         }
-    }
-    .newsletter__inputs{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        gap: 10px;
-        .newsletter__input{
-            width: 47%;
-            @include padrao-input;
+        .newsletter__inputs{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 10px;
+            .newsletter__input{
+                width: 47%;
+                @include padrao-input;
+            }
+            .newsletter__input:focus{
+                outline: none;
+                box-shadow: none;
+            }
         }
     }
 }
@@ -214,7 +220,6 @@
     padding: 20px 30px 40px 30px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;   
     width: 100%;
     visibility: hidden;
@@ -226,12 +231,8 @@
         }
 
         .footer__logo{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: nowrap;
             width: 50px;
+            margin: 0 auto;
             padding-bottom: 20px;
         }
         .footer__register__social{
@@ -263,6 +264,10 @@
                 .register__form__input::placeholder{
                     color: $branco;
                     font-size: 13px;
+                }
+                .register__form__input:focus{
+                    outline: none;
+                    box-shadow: none;
                 }
             }
             .footer__register__button{
@@ -325,7 +330,7 @@
     .footer__register__social{
         display: grid;
         grid-template-columns: auto auto auto;
-        grid-template-areas: "register register social" ;
+        grid-template-areas: "register register social";
         grid-template-rows: auto;
         gap: 40px;
 
@@ -396,5 +401,53 @@
             gap: 20px;
         }
 
+    }
+    //NEWSLLETER{
+    .newsletter{
+        flex-direction: row;
+        .newsletter__banner-mobile{
+            display: none;
+        }
+        .newsletter__banner-desktop{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+
+
+        }
+
+        .newsletter__banner-desktop img{
+            max-width: 50%;
+        }
+
+
+
+
+
+
+
+    }
+    //FOOTER
+    .footer{
+        padding-bottom: 70px;
+        .footer__topicos{
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            text-align: start;
+            flex-wrap: wrap;
+            align-items: start;
+            gap: 80px;
+            
+            .footer__topico{
+                width: 25%;
+            }
+        }
+        .footer__register__social{
+            grid-template-columns: 40% 60%;
+            grid-template-areas: "register social" ;
+        }
     }
 }
