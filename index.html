@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <!-- FAVICON -->
     <link rel="shortcut icon" href="../img/logo-footer-favicon.svg" type="image/x-icon">
     <!-- RESET CSS -->
@@ -18,49 +18,56 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- SCRIPT SCROLL REVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- SCRIPT -->
+    <script src="js/main.js" defer></script>
+    <!-- TITLE -->
     <title>Croppeds</title>
 </head>
 <body id="body">
-    <div class="container__geral">
+
         <header>
-        <section class="header__wrap">
-            <div class="content__header">
-                <div class="header" id="header">
-                    <div class="menu__hamburguer" id="menu__hamburguer">
-                        <i class="fa-solid fa-bars"></i>
+                <section class="header__wrap">
+                    <div class="content__header">
+                            <div class="header" id="header">
+                                <div class="menu__hamburguer" id="menu__hamburguer">
+                                    <i class="fa-solid fa-bars"></i>
+                                </div>
+                                <div id="logo__header">
+                                    <img src="../img/logo.svg" alt="Logo Croppeds">
+                                </div>
+                                <div class="header__menu__desktop">
+                                    
+                                </div>
+                                <div class="shoppingbag__login">
+                                    <a class="icon__header" href="#"><i class="fa-solid fa-user"></i></a>
+                                    <a class="icon__header" href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                                </div>
+                            </div>
                     </div>
-                    <div id="logo__header">
-                        <img src="../img/logo.svg" alt="Logo Croppeds">
-                    </div>
-                    <div class="header__menu__desktop">
-                        
-                    </div>
-                    <div class="shoppingbag__login">
-                        <a class="icon__header" href="#"><i class="fa-solid fa-user"></i></a>
-                        <a class="icon__header" href="#"><i class="fa-solid fa-bag-shopping"></i></a>
-                    </div>
-                </div>
-            </div>
             <form class="header__search-space">
                 <input type="text" placeholder="O que você está procurando?">
                 <button class="btn__busca">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </form>
-        </section>
+                </section>
+            </div>
         </header>  
+
         <main>
         <div class="content">
             <section class="banners__home">
-                <a href="#" class="item__banner-mobile" id="banner__home1"><img src="../img/banner1.jpg" alt="banner 1"></a>
-                <a href="#" class="item__banner-mobile" id="banner__home2"><img src="../img/banner2.jpg" alt="banner 2"></a>
-                <a href="#" class="item__banner-mobile" id="banner__home3"><img src="../img/banner3.jpg" alt="banner 3"></a>
+                <a href="#" id="banner__home1" class="item__banner-mobile"><img src="../img/banner1.jpg" alt="banner 1"></a>
+                <a href="#" id="banner__home2" class="item__banner-mobile"><img src="../img/banner2.jpg" alt="banner 2"></a>
+                <a href="#" id="banner__home3" class="item__banner-mobile"><img src="../img/banner3.jpg" alt="banner 3"></a>
             </section>
             <section class="banners__vantagem">
                 <a href="#" class="item__banner-mobile" id="banner4"><img src="../img/banner4.jpg" alt="banner 4"></a>
                 <a href="#" class="item__banner-mobile" id="banner5"><img src="../img/banner5.jpg" alt="banner 5"></a>
             </section>
-            <section class="grid-banners__mobile">
+            <section class="grid-flex-banners">
                 <h2 class="banners__mobile__title">Está bombando</h2>
                 <div class="banners__grid">
                     <a href="#" class="banners__grid__link"><img src="../img/ombroso.jpg" alt="Croppeds de um ombro só"></a>
@@ -91,6 +98,7 @@
             </section>
         </div>
         </main>
+
         <footer>
         <div class="content">
             <div class="footer" id="footer">
@@ -124,7 +132,6 @@
                             <li><a href="#">Avenida Conselheiro Julius Arp, 80 Centro - Nova Friburgo - RJ / 28623-000</a></li>
                             <li><a href="#">Seg - Sex: 8:00h - 17:00h</a></li>
                             <li><a href="#">+55 (22) 99999-6191</a></li>
-                            <li><a href="#">+55 (22) 99999-6191</a></li>
                         </ul>
                     </div>
                     <div class="footer__topico">
@@ -149,7 +156,6 @@
             </div>
         </div>
         </footer>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
