@@ -106,6 +106,7 @@
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    visibility: hidden;
 
     .banners__mobile__title{
         font-size: 1.5em;
@@ -151,6 +152,7 @@
     justify-content: center;
     flex-direction: row;
     flex-wrap: nowrap;
+    visibility: hidden;
 
     .newsletter__banner{
         display: flex;
@@ -202,6 +204,7 @@
     justify-content: center;
     flex-direction: row;
     flex-wrap: nowrap;
+    visibility: hidden;
 }
 //FOOTER
 .footer{
@@ -214,6 +217,7 @@
     align-items: center;
     justify-content: center;   
     width: 100%;
+    visibility: hidden;
 
         .footer__title__padrao{
         color: $roxo;
