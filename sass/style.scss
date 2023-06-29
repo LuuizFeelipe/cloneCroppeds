@@ -14,8 +14,7 @@
 }
 
 .content__header{
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 15px;
 }
 
 .content{
@@ -38,7 +37,6 @@ img, a img{
         padding: 0 10%;
     }
 }
-
 @media screen and (min-width: 1024px){
     .content{
         margin: 0 auto;
