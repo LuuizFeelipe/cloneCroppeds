@@ -1,0 +1,179 @@
+// HEADER
+.header-mobile{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $branco;
+    border-radius: 0 0 20px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-top: 10px;
+    z-index: 10000;
+
+    .content__header{
+        position: relative;
+
+        //menu, logo, itens
+        .header{
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .menu__hamburguer i{
+            font-size: 25px;
+            color: $roxo;
+        }
+        #logo__header{
+            padding: 0 10px;
+        }
+        .header__menu__desktop{
+            display: none;
+        }
+        #logo__header img{
+            width: 100%;
+        }
+        .shoppingbag__login{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 15px;
+        }
+    }
+
+    .shoppingbag__login i , .btn__busca i{
+        @include btn-laranja
+    }
+
+//SEARCH SPACE
+.header__search-space{
+        display: flex;
+        align-items: center;
+        margin: 10px 5px;
+}
+    .header__search-space input{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        border: none;
+        background-color: $bkgnd-searchbar;
+        padding: 8px 30px 8px 15px;
+        font-size: 13px;
+    }
+    .header__search-space input:focus{
+        box-shadow: 0;
+        outline: 0;
+    }
+    .btn__busca{
+        position: absolute;
+        right: 0;
+        margin-right: 10px;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+}
+
+// DISPLAY NONE 
+.header-desktop{
+    display: none;
+}
+
+
+@media screen and (min-width: 1024px){
+    //HEADER
+    .header-desktop{
+        display: block;
+        position: fixed;
+        width: 100%;
+        z-index: 9999;
+        top: 20px;
+        
+        .header__desktop-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: $branco;
+            width: 100%;
+            height: 100%;
+            padding: 15px 30px;
+
+            .nav__menu-desktop{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                flex-wrap: nowrap;
+                gap: 30px;
+
+                .nav__menu-link{
+                    text-decoration: none;
+                    font-weight: 500;
+                    color: $preto;
+                    line-height: 30px;
+                    font-size: 15px;
+                }
+            }
+            .search__icons__container{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 30%;
+
+                .header__search-space{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                }
+                .header__search-space input{
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 25px 0 0 25px;
+                    border: none;
+                    background-color: $bkgnd-searchbar;
+                    padding: 17.3px 10px 17.3px 20px;
+                    font-size: 16px;
+                }
+                .header__search-space input:focus{
+                    box-shadow: 0;
+                    outline: 0;
+                }
+                .header__search-space input::placeholder{
+                    font-size: 13px;
+                }
+                .btn__busca{
+                    margin-right: 10px;
+                    background-color: $bkgnd-searchbar;
+                    padding: 12.5px 25px 12.5px 10px;
+                    border-radius: 0 25px 25px 0;
+                    height: 100%;
+                    border: none;
+                    box-shadow: none;
+                    @include btn-laranja;
+                }
+                .shoppingbag__login{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    gap: 30px;
+
+                    .icon__header{
+                        @include btn-laranja;
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+// DISPLAY NONE
+    .header-mobile{
+        display: none;
+    }
+}

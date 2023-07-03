@@ -1,0 +1,151 @@
+.footer{
+    background: $bkgnd-footer;
+    margin-top: 70px;
+    text-align: center;
+    padding: 20px 30px 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    width: 100%;
+    visibility: hidden;
+
+        .footer__title__padrao{
+        color: $roxo;
+        font-weight: 700;
+        margin-bottom: 15px;
+        }
+
+        .footer__logo{
+            width: 50px;
+            margin: 0 auto;
+            padding-bottom: 20px;
+        }
+        
+        .footer__register__social{
+            width: 100%;
+            margin-bottom: 20px;
+            //REGISTER
+            .footer__register{
+                margin-bottom: 30px;
+            }
+            .footer__register__title{
+                text-align: start;
+            }
+            .footer__register__form{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex-wrap: nowrap;
+                gap: 10px;
+                margin: 15px 0;
+
+                .register__form__input{
+                    @include padrao-input;    
+                    width: auto;  
+                    text-align: left;
+                    background: transparent;
+                    border: 2px solid $branco;
+                    color: $branco;
+                }
+                .register__form__input::placeholder{
+                    color: $branco;
+                    font-size: 13px;
+                }
+                .register__form__input:focus{
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+            .footer__register__button{
+                text-align: start;
+                .submite__register__footer{
+                    @include padrao-btn-roxo;
+                    width: 40%;
+                    text-align: start;
+                    padding-left: 10px;
+                }
+            }
+            //SOCIAL
+            .footer__social__icons{
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+
+                .social__link{
+                    text-decoration: none;
+                    color: $roxo;
+                    font-size: 25px;
+
+                }
+            }
+        }
+        .footer__topicos{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            gap: 20px;
+
+            .topico__lista{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .topico__lista li a{
+                text-decoration: none;
+                color: $branco;
+                font-size: 14px;
+            }
+        }
+}
+
+@media screen and (min-width: 640px){
+
+    //FOOTER
+    .footer__register__social{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-areas: "register register social";
+        grid-template-rows: auto;
+        gap: 40px;
+
+        .footer__register{
+            grid-area: register;
+            margin-bottom: 0px;
+        }
+        
+        .footer__social{
+            grid-area: social;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    //FOOTER
+    .footer{
+        padding-bottom: 70px;
+        .footer__topicos{
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            text-align: start;
+            flex-wrap: wrap;
+            align-items: start;
+            gap: 80px;
+            
+            .footer__topico{
+                width: 25%;
+            }
+        }
+        .footer__register__social{
+            grid-template-columns: 40% 60%;
+            grid-template-areas: "register social" ;
+        }
+    }
+}

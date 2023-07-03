@@ -1,0 +1,101 @@
+.newsletter{
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    visibility: hidden;
+
+    .newsletter__banner-mobile{
+        background-image: url(https://www.croppeds.com.br/app-croppeds/assets/images/dinamica/album/11/x11-banner---newsletter-191222-daebf8.jpg.pagespeed.ic.-VasfLyX92.jpg); 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        background-repeat: no-repeat;
+        background-size: cover;      
+    }
+    .newsletter__conteudo{
+        flex: 1;
+        background-color: rgba(245, 245, 245, 0.603);
+        padding: 25px;
+
+        .newsletter__title{
+            color: $roxo;
+            font-size: 30px;
+            padding-right: 20px;
+        }
+        .newsletter__title b{
+            font-weight: 700;
+        }
+        .newsletter__text{
+            font-weight: 600;
+        }
+        .newsletter__inputs{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 10px;
+            .newsletter__input{
+                width: 47%;
+                @include padrao-input;
+            }
+            .newsletter__input:focus{
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+// DISPLAY NONE 
+    .newsletter__banner-desktop{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 640px){
+    .newsletter{
+        .newsletter__conteudo{
+            padding: 70px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .newsletter{
+        flex-direction: row;
+        .newsletter__banner-desktop{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .newsletter__banner-desktop img{
+            max-width: 50%;
+        }
+
+        .newsletter__input-desktop{
+            background-color: $bkgnd-searchbar;
+            @include padrao-input;
+        }
+        .newsletter__input-desktop{
+            background-color: $bkgnd-searchbar;
+            @include padrao-input;
+        }
+        .newsletter__input-desktop:focus{
+            outline: none;
+            box-shadow: none;
+        }
+        
+    // DISPLAY NONE
+    .newsletter__banner-mobile{
+        display: none;
+    }
+    }
+}

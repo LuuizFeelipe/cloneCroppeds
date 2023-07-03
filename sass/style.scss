@@ -1,5 +1,14 @@
+// CORES E FONTES
 @import "./elements/color-font.scss";
-@import "./paginas/home.scss";
+
+//DIVISÃO HOME
+@import "./home/divisao__home/header.scss";
+@import "./home/divisao__home/banners.scss";
+@import "./home/divisao__home/banners__vantagem.scss";
+@import "./home/divisao__home/gridFlexBanners.scss";
+@import "./home/divisao__home/newsletter.scss";
+@import "./home/divisao__home/home__banner.scss";
+@import "./home/divisao__home/footer.scss";
 
 
 *{
@@ -31,12 +40,12 @@ img, a img{
 }
 
 
-
 @media screen and (min-width: 640px){
     .content{
         padding: 0 10%;
     }
 }
+
 @media screen and (min-width: 1024px){
     .content{
         margin: 0 auto;

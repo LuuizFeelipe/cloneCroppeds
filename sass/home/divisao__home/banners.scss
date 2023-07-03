@@ -1,0 +1,43 @@
+//BANNERS
+.banners__home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 100%;
+    gap: 10px;
+    margin-bottom: 10px;
+    visibility: hidden;
+
+    .item__banner-mobile{
+    width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    //BANNERS
+    .banners__home{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr .5fr;
+        grid-template-areas: 
+        "grid1 grid2"
+        "grid1 grid3";
+        gap: 20px;
+
+        .item__banner-mobile{
+            object-fit: cover;
+            height: 100%;
+        }
+        #banner__home1{
+            grid-area: grid1;
+        }
+        #banner__home2{
+            grid-area: grid2;
+        }
+        #banner__home3{
+            grid-area: grid3;
+        }
+    }
+}

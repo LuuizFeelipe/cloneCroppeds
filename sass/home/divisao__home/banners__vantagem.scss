@@ -1,0 +1,21 @@
+.banners__vantagem{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 30px;
+    visibility: hidden;
+}
+
+@media screen and (min-width: 1024px){
+    .banners__vantagem{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        gap: 20px;
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+}
