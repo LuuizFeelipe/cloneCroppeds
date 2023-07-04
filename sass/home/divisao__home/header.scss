@@ -91,6 +91,7 @@
         width: 100%;
         z-index: 9999;
         top: 20px;
+        transition: 0.2s;
         
         .header__desktop-container{
             display: flex;
@@ -114,6 +115,7 @@
                     color: $preto;
                     line-height: 30px;
                     font-size: 15px;
+                    text-transform: lowercase;
                 }
             }
             .search__icons__container{
@@ -145,6 +147,7 @@
                 }
                 .header__search-space input::placeholder{
                     font-size: 13px;
+                    font-style: italic;
                 }
                 .btn__busca{
                     margin-right: 10px;
@@ -165,7 +168,7 @@
 
                     .icon__header{
                         @include btn-laranja;
-                        font-size: 25px;
+                        font-size: 23px;
                     }
                 }
             }

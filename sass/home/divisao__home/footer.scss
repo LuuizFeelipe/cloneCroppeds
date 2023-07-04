@@ -7,7 +7,6 @@
     flex-direction: column;
     justify-content: center;   
     width: 100%;
-    visibility: hidden;
 
         .footer__title__padrao{
         color: $roxo;
@@ -78,7 +77,6 @@
                     text-decoration: none;
                     color: $roxo;
                     font-size: 25px;
-
                 }
             }
         }
@@ -102,6 +100,27 @@
                 font-size: 14px;
             }
         }
+}
+
+.botao__topo{
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    #btn__top{
+        background: transparent;
+        border: none;
+    }
+    #btn__top i{
+        font-size: 20px;
+        background: $roxo;
+        color: $branco;
+        padding: 10px;
+        border-radius: 25px;
+    }
+
+
 }
 
 @media screen and (min-width: 640px){
@@ -146,6 +165,12 @@
         .footer__register__social{
             grid-template-columns: 40% 60%;
             grid-template-areas: "register social" ;
+
+            .footer__social__icons{
+                .social__link{
+                    font-size: 35px;
+                }
+            }
         }
     }
 }

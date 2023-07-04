@@ -4,7 +4,6 @@
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    visibility: hidden;
 
     .banners__title{
         font-size: 1.5em;
@@ -44,6 +43,12 @@
 
     //GRID FLEX BANNERS DESKTOP
     .grid-flex-banners{
+        .banners__title{
+            font-size: 40px;
+            padding-left: 3em;
+            margin: 40px 0;
+            font-weight: 400;
+        }
         .banners__grid{
             display: flex;
             flex-wrap: nowrap;

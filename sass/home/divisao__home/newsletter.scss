@@ -7,7 +7,6 @@
     justify-content: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    visibility: hidden;
 
     .newsletter__banner-mobile{
         background-image: url(https://www.croppeds.com.br/app-croppeds/assets/images/dinamica/album/11/x11-banner---newsletter-191222-daebf8.jpg.pagespeed.ic.-VasfLyX92.jpg); 
@@ -84,10 +83,7 @@
             background-color: $bkgnd-searchbar;
             @include padrao-input;
         }
-        .newsletter__input-desktop{
-            background-color: $bkgnd-searchbar;
-            @include padrao-input;
-        }
+    
         .newsletter__input-desktop:focus{
             outline: none;
             box-shadow: none;
