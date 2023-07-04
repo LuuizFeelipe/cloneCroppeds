@@ -480,14 +480,18 @@
 }
 
 .botao__topo {
-  display: flex;
   position: fixed;
   bottom: 20px;
   right: 20px;
 }
 .botao__topo #btn__top {
+  display: none;
   background: transparent;
   border: none;
+  cursor: pointer;
+}
+.botao__topo #btn__top.show {
+  display: block;
 }
 .botao__topo #btn__top i {
   font-size: 20px;
