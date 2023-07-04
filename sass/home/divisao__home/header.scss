@@ -9,7 +9,6 @@
     position: fixed;
     top: 0;
     width: 100%;
-    padding-top: 10px;
     z-index: 10000;
 
     .content__header{
@@ -21,7 +20,78 @@
             flex-wrap: nowrap;
             align-items: center;
             justify-content: space-between;
+            padding-top: 10px;
         }
+        .container__nav-mobile{
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.507);
+            position: absolute;
+            top: 0;
+            z-index: 9000;
+            display: none;
+
+            .menu__nav-mobile{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 60%;
+                background-color: $branco;
+                height: 100vh;
+                border-bottom: 4px solid $roxo;
+                z-index: 9001;
+
+               
+                .login__btnClose__nav-mobile{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 15px;
+                    border-bottom: 4px solid $roxo;
+
+                    .login__nav-mobile{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 15px;
+                        text-decoration: none;
+                        color: $preto;
+                        font-size: 15px;
+                    }
+                    .login__nav-mobile i{
+                        color: $roxo;
+                        font-size: 17px;
+                    }
+                }
+
+                #btn__close-menu{
+                    font-size: 35px;
+                    color: $preto;
+                    margin-left: 5px;
+                }
+
+                .topicos__nav-mobile{
+                    list-style: none;
+
+                    .topico-item__nav-mobile{
+                        padding: 10px 15px;
+                        color: $roxo;
+                        border-bottom: 1px solid $roxo;
+                    }
+                }
+                .btn-whatsapp__nav-mobile{
+                    padding: 15px;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    background-color: $bkgnd-footer;
+                }
+                .btn-whatsapp__nav-mobile i, .btn-whatsapp__nav-mobile p{
+                    color: $branco;
+                }
+            }
+        }
+
         .menu__hamburguer i{
             font-size: 25px;
             color: $roxo;

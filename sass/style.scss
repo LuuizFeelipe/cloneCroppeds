@@ -39,6 +39,11 @@ img, a img{
     height: 100%;
 }
 
+p, ul{
+    margin: 0;
+    padding: 0;
+}
+
 
 @media screen and (min-width: 640px){
     .content{
